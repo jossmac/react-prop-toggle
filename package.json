@@ -1,13 +1,21 @@
 {
   "name": "react-prop-toggle",
   "version": "1.0.1",
-  "description":
-    "A safe, declarative way to influence the styles and attributes of nodes outside your app's tree.",
+  "description": "A safe, declarative way to influence the styles and attributes of nodes outside your app's tree.",
   "main": "dist/index.js",
   "license": "MIT",
   "homepage": "https://github.com/jossmac/react-prop-toggle",
-  "bugs": { "url": "https://github.com/jossmac/react-prop-toggle/issues" },
-  "keywords": ["react", "prop", "property", "attribute", "style", "toggle"],
+  "bugs": {
+    "url": "https://github.com/jossmac/react-prop-toggle/issues"
+  },
+  "keywords": [
+    "react",
+    "prop",
+    "property",
+    "attribute",
+    "style",
+    "toggle"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
@@ -17,9 +25,7 @@
     "deploy:examples": "gh-pages -d examples/dist",
     "publish:examples": "npm run build:examples && npm run deploy:examples"
   },
-  "dependencies": {
-    "unstated": "^2.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
