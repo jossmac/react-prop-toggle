@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Component Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    /*
+      ==============================
+      Resets
+      ==============================
+    */
+    html {
+      height: 100%;
+    }
+    body {
+      -moz-font-feature-settings: 'liga' on;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      background-repeat: no-repeat;
+      background-position: left top;
+      color: #253858;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      text-rendering: optimizeLegibility;
+      transition: background-image 200ms;
+    }
+    a { color: #6554C0; text-decoration: none; }
+    a:hover,
+    a:focus {
+      outline: 0;
+      text-decoration: underline;
+    }
+
+    /*
+      ==============================
+      Misc.
+      ==============================
+    */
+
+    header {
+      margin-bottom: 2em;
+    }
+    h1 {
+      display: inline;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+    footer {
+      color: white;
+      margin-top: 2em;
+      visibility: hidden;
+    }
+    .fun footer {
+      visibility: visible;
+    }
+    footer > a {
+      color: white;
+    }
+
+    /*
+      ==============================
+      Body
+      ==============================
+    */
+    .fun {
+      background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
