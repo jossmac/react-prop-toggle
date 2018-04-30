@@ -13,6 +13,7 @@ import {
   SwitchTrack,
   SwitchHandle,
 } from './styled';
+import './index.css';
 
 // example
 // ------------------------------

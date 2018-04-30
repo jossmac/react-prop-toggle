@@ -8,8 +8,8 @@ const gutter = 15;
 
 export const Container = props => (
   <div
-    style={{
-      display: 'flex',
+    css={{
+      display: 'flex ',
       flexDirection: 'column',
       height: '100vh',
       boxSizing: 'border-box',
@@ -26,7 +26,7 @@ export const Container = props => (
 );
 export const Box = ({ isActive, ...props }) => (
   <div
-    style={{
+    css={{
       backgroundColor: 'white',
       boxShadow: isActive
         ? '0 1px 5px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.1)'
@@ -42,21 +42,18 @@ export const Box = ({ isActive, ...props }) => (
 const switchSize = 48;
 export const Switch = props => (
   <div
-    style={{
-      position: 'relative',
-      width: switchSize * 2,
+    css={{
       margin: 'auto',
-      WebkitUserSelect: 'none',
-      msUserSelect: 'none',
-      MozUserSelect: 'none',
+      position: 'relative',
       userSelect: 'none',
+      width: switchSize * 2,
     }}
     {...props}
   />
 );
 export const SwitchTrack = props => (
   <div
-    style={{
+    css={{
       height: switchSize / 2,
       backgroundColor: 'rgba(0,0,0,0.1)',
       width: '100%',
@@ -66,21 +63,24 @@ export const SwitchTrack = props => (
   />
 );
 export const SwitchHandle = ({ isActive, ...props }) => (
-  <div
-    style={{
+  <button
+    type="button"
+    css={{
       alignItems: 'center',
       background: 'linear-gradient(to bottom, white, #fafbfc)',
       backgroundColor: 'white',
+      border: 0,
       borderRadius: '50%',
       boxShadow: '0 1px 5px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.1)',
       cursor: 'pointer',
-      display: 'flex',
+      display: 'flex ',
       filter: `grayscale(${isActive ? '0%' : '100%'})`,
       fontSize: switchSize / 2,
       height: switchSize,
       justifyContent: 'center',
       left: 0,
       marginTop: -(switchSize / 2),
+      outline: 0,
       position: 'absolute',
       top: '50%',
       transform: `translateX(${isActive ? '100%' : 0}) rotate(${
@@ -88,6 +88,11 @@ export const SwitchHandle = ({ isActive, ...props }) => (
       })`,
       transition: 'transform 200ms, filter 200ms',
       width: switchSize,
+
+      '&:hover, &:focus': {
+        boxShadow:
+          '0 1px 5px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.1)',
+      },
     }}
     {...props}
   />

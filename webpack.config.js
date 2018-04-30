@@ -1,9 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const htmlWebpackPlugin = new HtmlWebpackPlugin({
+
+const htmlPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'examples/src/index.html'),
   filename: './index.html',
 });
+const faviconPlugin = new HtmlWebpackPlugin({
+  favicon: 'examples/src/favicon.ico',
+});
+
 module.exports = {
   entry: path.join(__dirname, 'examples/src/index.js'),
   output: {
@@ -17,9 +22,17 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: 'file-loader?name=[name].[ext]',
+      },
     ],
   },
-  plugins: [htmlWebpackPlugin],
+  plugins: [htmlPlugin, faviconPlugin],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
