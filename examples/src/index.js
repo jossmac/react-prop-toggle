@@ -55,7 +55,7 @@ class App extends Component {
             </Switch>
           </div>
         </Box>
-        <Footer>
+        <Footer isVisible={isActive}>
           <span> by </span>
           <a href="https://twitter.com/jossmackison" target="_blank">
             @jossmac
