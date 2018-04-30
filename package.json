@@ -4,7 +4,7 @@
   "description": "A safe, declarative way to influence the styles and attributes of nodes outside your app's tree.",
   "main": "dist/index.js",
   "license": "MIT",
-  "homepage": "https://github.com/jossmac/react-prop-toggle",
+  "homepage": "https://jossmac.github.io/react-prop-toggle",
   "bugs": {
     "url": "https://github.com/jossmac/react-prop-toggle/issues"
   },
